@@ -1,0 +1,26 @@
+import { timerify } from '../../util/Performance.js';
+import { hasDependency, load } from '../../util/plugin.js';
+import { toEntryPattern, toProductionEntryPattern } from '../../util/protocols.js';
+export const NAME = '';
+export const ENABLERS = [''];
+export const isEnabled = ({ dependencies }) => hasDependency(dependencies, ENABLERS);
+export const CONFIG_FILE_PATTERNS = [];
+export const ENTRY_FILE_PATTERNS = [];
+export const PRODUCTION_ENTRY_FILE_PATTERNS = [];
+export const PROJECT_FILE_PATTERNS = [];
+const findPluginDependencies = async (configFilePath, options) => {
+    const { manifest, config, isProduction } = options;
+    const localConfig = configFilePath.endsWith('package.json')
+        ?
+            manifest.plugin
+        : await load(configFilePath);
+    if (!localConfig)
+        return [];
+    const entryPatterns = (config?.entry ?? localConfig.entryPathsOrPatterns ?? ENTRY_FILE_PATTERNS).map(toEntryPattern);
+    const productionPatterns = config.entry ? [] : PRODUCTION_ENTRY_FILE_PATTERNS.map(toProductionEntryPattern);
+    if (isProduction)
+        return [...entryPatterns, ...productionPatterns];
+    const dependencies = localConfig?.plugins ?? [];
+    return [...dependencies, ...entryPatterns, ...productionPatterns];
+};
+export const findDependencies = timerify(findPluginDependencies);

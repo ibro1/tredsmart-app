@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["node-modules-polyfills-commonjs:events"],
+  "sourcesContent": ["export * from 'events'"],
+  "mappings": ";;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAAAA,eAAA;AAAA;AAAA;AAAA;AAAA;",
+  "names": ["init_events"]
+}

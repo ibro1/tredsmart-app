@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/schemas/general.ts"],
+  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/schemas/general.ts\"\n);\nimport.meta.hot.lastModified = \"1738409028328.369\";\n}\n// REMIX HMR END\n\nimport { z } from \"zod\"\n\nexport const id = z.string({ required_error: \"ID is required\" })\n\nexport const userId = z.string({ required_error: \"User ID is required\" })\n\nconst intent = z.string().optional()\n\nexport const redirectTo = z.string().optional()\n\nexport const schemaGeneralId = z.object({ id, intent })\n"],
+  "mappings": ";;;;;;;;AAEA,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAKO,IAAM,KAAK,EAAE,OAAO,EAAE,gBAAgB,iBAAiB,CAAC;AAExD,IAAM,SAAS,EAAE,OAAO,EAAE,gBAAgB,sBAAsB,CAAC;AAExE,IAAM,SAAS,EAAE,OAAO,EAAE,SAAS;AAE5B,IAAM,aAAa,EAAE,OAAO,EAAE,SAAS;AAEvC,IAAM,kBAAkB,EAAE,OAAO,EAAE,IAAI,OAAO,CAAC;",
+  "names": []
+}

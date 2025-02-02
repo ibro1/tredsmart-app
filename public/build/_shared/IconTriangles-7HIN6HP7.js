@@ -1,0 +1,10 @@
+import {
+  IconTriangles
+} from "/build/_shared/chunk-LSWQX62I.js";
+import "/build/_shared/chunk-IUMTU3HX.js";
+import "/build/_shared/chunk-ZPXNLZE6.js";
+import "/build/_shared/chunk-DPSM2F2X.js";
+export {
+  IconTriangles as default
+};
+//# sourceMappingURL=/build/_shared/IconTriangles-7HIN6HP7.js.map

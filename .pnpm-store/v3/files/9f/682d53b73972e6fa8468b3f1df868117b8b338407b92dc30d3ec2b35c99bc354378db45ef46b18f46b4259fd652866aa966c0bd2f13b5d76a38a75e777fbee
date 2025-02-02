@@ -1,0 +1,7 @@
+import type { IsPluginEnabledCallback, GenericPluginCallback } from '../../types/plugins.js';
+export declare const NAME = "GraphQL Codegen";
+export declare const ENABLERS: RegExp[];
+export declare const PACKAGE_JSON_PATH = "codegen";
+export declare const isEnabled: IsPluginEnabledCallback;
+export declare const CONFIG_FILE_PATTERNS: string[];
+export declare const findDependencies: GenericPluginCallback;

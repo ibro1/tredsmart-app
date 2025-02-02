@@ -1,0 +1,21 @@
+import {
+  createReactComponent
+} from "/build/_shared/chunk-IUMTU3HX.js";
+
+// node_modules/.pnpm/@tabler+icons-react@3.26.0_react@18.2.0/node_modules/@tabler/icons-react/dist/esm/icons/IconCrop11Filled.mjs
+var IconCrop11Filled = createReactComponent("filled", "crop-1-1-filled", "IconCrop11Filled", [["path", { "d": "M18 3a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12a3 3 0 0 1 3 -3z", "key": "svg-0" }]]);
+
+export {
+  IconCrop11Filled
+};
+/*! Bundled license information:
+
+@tabler/icons-react/dist/esm/icons/IconCrop11Filled.mjs:
+  (**
+   * @license @tabler/icons-react v3.26.0 - MIT
+   *
+   * This source code is licensed under the MIT license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+*/
+//# sourceMappingURL=/build/_shared/chunk-PUKRLI5J.js.map

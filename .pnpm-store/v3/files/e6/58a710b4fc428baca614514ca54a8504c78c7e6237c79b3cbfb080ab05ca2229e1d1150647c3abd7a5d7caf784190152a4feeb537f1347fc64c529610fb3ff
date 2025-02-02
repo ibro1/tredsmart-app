@@ -1,0 +1,26 @@
+import { hasDependency } from '../../util/plugin.js';
+import { toEntryPattern, toProductionEntryPattern } from '../../util/protocols.js';
+export const NAME = 'Next.js';
+export const ENABLERS = ['next'];
+export const isEnabled = ({ dependencies }) => hasDependency(dependencies, ENABLERS);
+export const ENTRY_FILE_PATTERNS = ['next.config.{js,ts,cjs,mjs}'];
+const productionEntryFilePatternsWithoutSrc = [
+    'middleware.{js,ts}',
+    'app/**/route.{js,ts}',
+    'app/**/{error,layout,loading,not-found,page,template}.{js,jsx,ts,tsx}',
+    'instrumentation.{js,ts}',
+    'app/{manifest,sitemap,robots}.{js,ts}',
+    'app/**/{icon,apple-icon}.{js,ts,tsx}',
+    'app/**/{opengraph,twitter}-image.{js,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+];
+export const PRODUCTION_ENTRY_FILE_PATTERNS = [
+    ...productionEntryFilePatternsWithoutSrc,
+    ...productionEntryFilePatternsWithoutSrc.map(pattern => `src/${pattern}`),
+];
+export const findDependencies = async (configFilePath, options) => {
+    const { config } = options;
+    return config.entry
+        ? config.entry.map(toProductionEntryPattern)
+        : [...ENTRY_FILE_PATTERNS.map(toEntryPattern), ...PRODUCTION_ENTRY_FILE_PATTERNS.map(toProductionEntryPattern)];
+};
