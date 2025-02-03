@@ -5,9 +5,9 @@
 # React Router
 /.react-router/
 /build/
-/docs
-docs
+/docs1
+docs1
 ./build
 /public/build
 /public/build/
-/old
+/old1
