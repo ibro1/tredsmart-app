@@ -1,3 +1,0 @@
-/// <reference types="node" resolution-mode="require"/>
-declare let parseArgs: typeof import('node:util').parseArgs;
-export { parseArgs };
