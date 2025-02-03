@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/hooks/use-app-loader-data.tsx"],
-  "sourcesContent": ["// REMIX HMR BEGIN\nimport * as __hmr__ from \"remix:hmr\";\nif (import.meta) {\nimport.meta.hot = __hmr__.createHotContext(\n//@ts-expect-error\n\"app/hooks/use-app-loader-data.tsx\"\n);\nimport.meta.hot.lastModified = \"1738409028324.369\";\n}\n// REMIX HMR END\n\nimport { type PageStatus, type PostStatus } from \"@prisma/client\"\n\nimport { useMatchesData } from \"~/hooks/use-root-loader-data\"\n\nexport function useAppUserLoaderData() {\n  const appUserData = useMatchesData(\"routes/_app.user\") as {\n    postStatuses: PostStatus[]\n  }\n\n  return {\n    postStatuses: appUserData?.postStatuses,\n  }\n}\n\nexport function useAppAdminLoaderData() {\n  const appAdminData = useMatchesData(\"routes/_app.admin\") as {\n    pageStatuses: PageStatus[]\n    postStatuses: PostStatus[]\n  }\n\n  return {\n    pageStatuses: appAdminData?.pageStatuses,\n    postStatuses: appAdminData?.postStatuses,\n  }\n}\n"],
-  "mappings": ";;;;;;;;AAEA,IAAI,aAAa;AACjB,cAAY,MAAc;AAAA;AAAA,IAE1B;AAAA,EACA;AACA,cAAY,IAAI,eAAe;AAC/B;AAiBO,SAAS,wBAAwB;AACtC,QAAM,eAAe,eAAe,mBAAmB;AAKvD,SAAO;AAAA,IACL,cAAc,cAAc;AAAA,IAC5B,cAAc,cAAc;AAAA,EAC9B;AACF;",
-  "names": []
-}
