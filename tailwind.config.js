@@ -7,15 +7,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          300: 'rgb(147, 197, 253)',
-          500: 'rgb(59, 130, 246)',
-          700: 'rgb(29, 78, 216)',
+          300: 'rgb(var(--color-primary-300) / <alpha-value>)',
+          500: 'rgb(var(--color-primary-500) / <alpha-value>)',
+          700: 'rgb(var(--color-primary-700) / <alpha-value>)',
         },
         secondary: {
-          900: 'rgb(17, 24, 39)',
+          900: 'rgb(var(--color-secondary-900) / <alpha-value>)',
         },
         success: {
-          500: 'rgb(34, 197, 94)',
+          500: 'rgb(var(--color-success-500) / <alpha-value>)',
         }
       }
     }
