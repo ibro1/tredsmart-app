@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gradient-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-}
-
-.text-gradient-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 body {
   @apply bg-secondary-900 text-gray-100;
 }
