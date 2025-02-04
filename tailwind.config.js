@@ -7,18 +7,18 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          300: 'rgb(var(--color-primary-300))',
-          500: 'rgb(var(--color-primary-500))',
-          700: 'rgb(var(--color-primary-700))',
+          300: '#93c5fd',
+          500: '#3b82f6',
+          700: '#1d4ed8',
         },
         secondary: {
-          900: 'rgb(var(--color-secondary-900))',
+          900: '#111827',
         },
         success: {
-          500: 'rgb(var(--color-success-500))',
+          500: '#22c55e',
         }
-      }
-    }
+      },
+    },
   },
   plugins: [],
 }
