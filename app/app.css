@@ -1,27 +1,8 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply antialiased text-gray-900 dark:text-gray-100;
-  }
-}
-
-@layer components {
-  .gradient-primary {
-    @apply bg-gradient-primary from-blue-600 to-blue-800;
-  }
-
-  .gradient-secondary {
-    @apply bg-gradient-secondary from-gray-800 to-gray-900;
-  }
-
-  .gradient-success {
-    @apply bg-gradient-success from-green-500 to-green-700;
-  }
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
