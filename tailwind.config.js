@@ -33,6 +33,11 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        'gradient-secondary': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        'gradient-success': 'linear-gradient(to right, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
