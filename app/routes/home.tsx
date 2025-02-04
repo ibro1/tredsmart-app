@@ -21,7 +21,7 @@ function FeatureCard({ icon: Icon, title, description }: {
   description: string 
 }) {
   return (
-    <div className="p-6 bg-white/5 rounded-xl border border-gray-800 hover:border-primary-500 transition-all">
+    <div className="p-6 bg-black/20 rounded-xl border border-white/10 hover:border-primary-500 transition-all">
       <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
         <Icon className="w-6 h-6 text-white" />
       </div>
@@ -33,12 +33,12 @@ function FeatureCard({ icon: Icon, title, description }: {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-secondary-900">
+    <main className="min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold bg-gradient-primary text-transparent bg-clip-text mb-6">
+            <h1 className="text-4xl md:text-6xl font-display font-bold text-gradient-primary mb-6">
               Smart Crypto Trading with<br />Influencer Insights
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
@@ -79,6 +79,6 @@ export default function Home() {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
