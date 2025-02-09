@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 import { getTokenFromLLM } from "./get-token-from-llm";
 import { getTweets } from "./get-tweets";
